@@ -1,0 +1,62 @@
+{
+  "clientes": [
+    {
+      "id": "1",
+      "nome": "Fazenda Boa Vista",
+      "cidade": "Muriaé"
+    },
+    {
+      "id": "2",
+      "nome": "Sítio do Cedro",
+      "cidade": "Miraí"
+    },
+    {
+      "id": "1303",
+      "nome": "fazenda teste",
+      "cidade": "Muriaé"
+    },
+    {
+      "id": "9c6d",
+      "nome": "sdfsdf",
+      "cidade": "sfsdfsdfsdf"
+    },
+    {
+      "id": "7858",
+      "nome": "sdfdsfdsf",
+      "cidade": "sdfsdfsdfsd"
+    },
+    {
+      "id": "78bf",
+      "nome": "reinaldo",
+      "cidade": "teste"
+    },
+    {
+      "id": "b431",
+      "nome": "xxxxxxxxxx",
+      "cidade": "xxxxxxxxxxxxx"
+    }
+  ],
+  "produtos": [
+    {
+      "id": "1",
+      "nome": "Fertilizante NPK 10-10-10",
+      "preco": 150,
+      "estoque": 50
+    },
+    {
+      "id": "2",
+      "nome": "Semente de Milho (Saco 20kg)",
+      "preco": 420,
+      "estoque": 15
+    }
+  ],
+  "vendas": [
+    {
+      "id": "1",
+      "clienteNome": "Fazenda Boa Vista",
+      "produtoNome": "Fertilizante NPK",
+      "quantidade": 10,
+      "valorTotal": 1500
+    }
+  ]
+}
