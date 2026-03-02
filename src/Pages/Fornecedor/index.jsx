@@ -1,39 +1,42 @@
+// Importações
+
 import { useEffect, useState } from "react";
 import { api } from "../../Services/api";
 
-export function Produtos() {
-  const [produtos, setProdutos] = useState([]);
+export function Fornecedor() {
+  const [fornecedor, setFornecedor] = useState([]);
 
   useEffect(() => {
     api
-      .get("/produtos")
+      .get("/Fornecedores")
       .then((res) => {
-        // AQUI ESTAVA O ERRO: Agora está setProdutos e não setClientes
-        setProdutos(res.data);
+        setFornecedor(res.data);
       })
       .catch((err) => {
-        console.error("Erro ao buscar produtos:", err);
+        console.error("Erro ao buscar um possivel fornecedor:", err);
       });
   }, []);
 
   return (
+    // Texto a cima da tabela
     <div className="p-8">
       <h1 className="text-2xl font-bold mb-6 text-green-800">
-        Estoque de Produtos - AGROVIDA
+        Fornecedores - AGROVIDA
       </h1>
 
+      {/* Tabela que pega as informações dos fornecedores e aplica na tabela */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        {produtos.length > 0 ? (
-          produtos.map((produto) => (
+        {fornecedor.length > 0 ? (
+          fornecedor.map((fornecedor) => (
             <div
-              key={produto.id}
+              key={fornecedor.id}
               className="p-4 border rounded-lg shadow-md bg-white border-l-8 border-l-green-600"
             >
               <h3 className="font-bold text-lg text-gray-700">
-                {produto.nome}
+                {fornecedor.nome}
               </h3>
               <p className="text-gray-500">
-                Preço: R$ {produto.preco?.toFixed(2)}
+                Preço: R$ {fornecedor.preco?.toFixed(2)}
               </p>
 
               <div className="mt-4 flex justify-between items-center">
@@ -41,9 +44,9 @@ export function Produtos() {
                   Disponível
                 </span>
                 <span
-                  className={`text-xl font-black ${produto.estoque < 10 ? "text-red-600" : "text-green-700"}`}
+                  className={`text-xl font-black ${fornecedor.estoque < 10 ? "text-red-600" : "text-green-700"}`}
                 >
-                  {produto.estoque} un
+                  {fornecedor.estoque} un
                 </span>
               </div>
             </div>

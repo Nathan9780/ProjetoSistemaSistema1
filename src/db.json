@@ -34,6 +34,31 @@
       "id": "b431",
       "nome": "xxxxxxxxxx",
       "cidade": "xxxxxxxxxxxxx"
+    },
+    {
+      "id": "61a3",
+      "nome": "Rodrigo Ximenes",
+      "cidade": "São Paulo"
+    },
+    {
+      "id": "97ca",
+      "nome": "Carlos Italo",
+      "cidade": "São Paulo"
+    },
+    {
+      "id": "4cdb",
+      "nome": "Alan Ferreira de Paula",
+      "cidade": "Ceará"
+    },
+    {
+      "id": "59a7",
+      "nome": "Luciano Hulk",
+      "cidade": "Acre"
+    },
+    {
+      "id": "571a",
+      "nome": "Nathanzinha",
+      "cidade": "ASASA"
     }
   ],
   "produtos": [
@@ -58,5 +83,23 @@
       "quantidade": 10,
       "valorTotal": 1500
     }
-  ]
+  ],
+
+  "Fornecedores": [
+    {
+      "id": "1",
+      "nome": "AgroDistribuidora",
+      "cidade": "Muriaé",
+      "preco": 150,
+      "estoque": 50
+    },
+    {
+      "id": "2",
+      "nome": "Sementes do Campo",
+      "cidade": "Miraí",
+      "preco": 420,
+      "estoque": 15
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }
