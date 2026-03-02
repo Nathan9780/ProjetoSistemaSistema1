@@ -35,6 +35,11 @@ export function Fornecedor() {
               <h3 className="font-bold text-lg text-gray-700">
                 {fornecedor.nome}
               </h3>
+              <h2 className="text-sm text-gray-500">{fornecedor.cidade}</h2>
+              <h2 className="text-sm text-gray-500">
+                {fornecedor.representante}
+              </h2>
+              <p className="text-gray-500">Produto: {fornecedor.produto}</p>
               <p className="text-gray-500">
                 Preço: R$ {fornecedor.preco?.toFixed(2)}
               </p>
